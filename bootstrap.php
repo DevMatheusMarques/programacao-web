@@ -1,5 +1,7 @@
 <?php
 
+use Php\Primeiroprojeto\Controller\HomeController;
+
 require __DIR__.'/vendor/autoload.php';
 
 $method = $_SERVER['REQUEST_METHOD'];
@@ -9,17 +11,15 @@ $router = new Php\Primeiroprojeto\Router($method, $path);
 
 #Rotas
 
-$router->get('/olamundo', function (){
-    return "Olá Mundo";
-});
+$controller = new HomeController();
+
+$router->get('/olamundo', [$controller, 'olaMundo']);
 
 $router->get('/olapessoa/{nome}', function ($params){
     return 'Olá ' . $params[1];
 });
 
-$router->get('/exercicio1/formulario', function (){
-    include("exercicio1.html");
-});
+$router->get('/exercicio1/formulario', [$controller, 'formExe1']);
 
 $router->post('/exercicio1/resposta', function (){
     $valor1 = $_POST['valor1'];
@@ -31,9 +31,6 @@ $router->post('/exercicio1/resposta', function (){
 alert("Valor da soma: " + '.$soma.');
 window.location.href = "/exercicio1/formulario";
 </script>';
-
-    return ;
-
 });
 
 

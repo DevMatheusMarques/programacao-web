@@ -12,5 +12,7 @@
             "email": "estudosfatecmhcm@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+      "ext-pdo": "*"
+    }
 }

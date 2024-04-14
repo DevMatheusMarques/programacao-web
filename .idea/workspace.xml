@@ -4,91 +4,63 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="74860b03-9132-4f44-b806-17dd441136bb" name="Changes" comment="" />
+    <list default="true" id="7f5d0d2a-51dc-444a-a75d-ea9bcc123128" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/794c7665-7aad-4e9c-b5d9-308edce52226.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/794c7665-7aad-4e9c-b5d9-308edce52226/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/794c7665-7aad-4e9c-b5d9-308edce52226/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/794c7665-7aad-4e9c-b5d9-308edce52226/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/794c7665-7aad-4e9c-b5d9-308edce52226/storage_v2/_src_/schema/programacaoweb.gKalMA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/794c7665-7aad-4e9c-b5d9-308edce52226/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/banco.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootstrap.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/CategoriaController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ClienteController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/FornecedorController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ProdutoController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/DAO/CategoriaDAO.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/DAO/ClienteDAO.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/DAO/Conexao.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/DAO/FornecedorDAO.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/DAO/ProdutoDAO.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Domain/Categoria.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Domain/Cliente.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Domain/Fornecedor.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Domain/Produto.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Router.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/Categoria/inserir-categoria.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/Cliente/inserir-cliente.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/Fornecedor/inserir-fornecedor.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/Produto/inserir-produto.php" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
-    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+  <component name="ComposerSettings">
     <execution />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="HTML File" />
-      </list>
-    </option>
-  </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="C:\xampp\php\php.exe">
-    <include_path>
-      <path value="$PROJECT_DIR$/vendor/composer" />
-    </include_path>
-  </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 7
-}</component>
-  <component name="ProjectId" id="2dm4iAc2IQXHM2wDThU4h7xf6LX" />
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.laravel-idea.search-composer-json&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;oracle&quot;,
-      &quot;mysql&quot;
-    ]
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "git-widget-placeholder": "master"
   }
-}</component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Faculdade\5° Módulo\Programação Web\ProjetosComposer\PrimeiroProjetoComposer\src\View" />
-      <recent name="D:\Faculdade\5° Módulo\Programação Web\ProjetosComposer\PrimeiroProjetoComposer\src\Model\Domain" />
-      <recent name="D:\Faculdade\5° Módulo\Programação Web\ProjetosComposer\PrimeiroProjetoComposer\src\Views" />
-    </key>
+}]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="ComposerRunConfigurationType" factoryName="Composer Script">
+      <method v="2" />
+    </configuration>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="74860b03-9132-4f44-b806-17dd441136bb" name="Changes" comment="" />
-      <created>1710600044571</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1710600044571</updated>
-      <workItem from="1710600045708" duration="4033000" />
-      <workItem from="1710886809471" duration="9000" />
-      <workItem from="1711145573625" duration="4323000" />
-      <workItem from="1712355628334" duration="518000" />
-      <workItem from="1712356202405" duration="301000" />
-      <workItem from="1712356517992" duration="3358000" />
-      <workItem from="1712417540853" duration="35000" />
-      <workItem from="1712960506489" duration="4807000" />
-      <workItem from="1712965686829" duration="1824000" />
-      <workItem from="1713034397248" duration="7241000" />
-      <workItem from="1713065562606" duration="6050000" />
-    </task>
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
   </component>
 </project>

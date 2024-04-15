@@ -1,8 +1,7 @@
 <?php
 
-//$categoria = new \Php\Primeiroprojeto\Model\DAO\CategoriaDAO();
-
-//$categorias = $categoria->getAll(_GET['categorias']);
+$produtoDao = new \Php\Primeiroprojeto\Model\DAO\ProdutoDAO;
+$produtos = $produtoDao->getAll();
 
 ?>
 
@@ -38,15 +37,15 @@
                 <label for="produto_id" class="form-label">Informe o ID do produto fornecido:</label>
                 <input type="number" class="form-control" id="produto_id" name="produto_id" aria-describedby="produto_id">
             </div>
-            <!--<div class="mb-3">
-                <label for="nome" class="form-label">Selecione a categoria do produto:</label><br>
-                <select name="categorias" id="categorias" class="form-control">
-                    <option></option>
-                    <option>Roupas</option>
-                    <option>Acessórios</option>
-                    <option>Tenis</option>
+            <div class="mb-3">
+                <label for="categoria_id" class="form-label">Selecione a categoria do produto:</label><br>
+                <select name="categorias" id="categoria_id" class="form-control">
+                    <option selected value="">Escolha uma opção</option>
+                    <?php foreach ($produtos as $produto) : ?>
+                        <option value="<?= $produto['id']; ?>"><?= $produto['nome'];?></option>
+                    <?php endforeach; ?>
                 </select>
-            </div>-->
+            </div>
             <div class="mb-3">
                 <button type="submit" class="btn bg-info-subtle mt-5">Cadastrar</button>
             </div>

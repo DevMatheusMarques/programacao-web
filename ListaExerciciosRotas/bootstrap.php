@@ -11,9 +11,11 @@ $router = new Php\Primeiroprojeto\Router($method, $path);
 
 $homeController = new \Php\Primeiroprojeto\Controller\HomeController();
 
+$router->get('/exercicio1', [$homeController, 'ex1']);
+$router->post('/exercicio1', [$homeController, 'ex1']);
 
-
-$router->get('/exercicio1', [$homeController, 'abrir']);
+$router->get('/exercicio2', [$homeController, 'renderizaOExercicio2']);
+$router->post('/exercicio2', [$homeController, 'ex2']);
 
 
 #Rotas

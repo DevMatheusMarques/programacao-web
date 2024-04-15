@@ -8,22 +8,6 @@ class ProdutoDAO
 {
     private Conexao $conexao;
 
-    /**
-     * @return Conexao
-     */
-    public function getConexao(): Conexao
-    {
-        return $this->conexao;
-    }
-
-    /**
-     * @param Conexao $conexao
-     */
-    private function setConexao(Conexao $conexao)
-    {
-        $this->conexao = $conexao;
-    }
-
     public function __construct()
     {
         $this->conexao = new Conexao();
@@ -36,5 +20,14 @@ class ProdutoDAO
         $p->bindValue(':valor', $produto->getValor());
         $p->bindValue(':categoria_id', $produto->getCategoriaId());
         return $p->execute();
+    }
+
+    public function getAll()
+    {
+        $sql = 'select * from produto ';
+        $p = $this->conexao->getConexao()->query($sql);
+
+        $row = $p->fetchAll(\PDO::FETCH_ASSOC);
+        return $row;
     }
 }

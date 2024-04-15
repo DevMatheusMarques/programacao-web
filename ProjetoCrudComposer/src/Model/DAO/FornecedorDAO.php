@@ -8,22 +8,6 @@ class FornecedorDAO
 {
     private Conexao $conexao;
 
-    /**
-     * @return Conexao
-     */
-    public function getConexao(): Conexao
-    {
-        return $this->conexao;
-    }
-
-    /**
-     * @param Conexao $conexao
-     */
-    private function setConexao(Conexao $conexao)
-    {
-        $this->conexao = $conexao;
-    }
-
     public function __construct()
     {
         $this->conexao = new Conexao();

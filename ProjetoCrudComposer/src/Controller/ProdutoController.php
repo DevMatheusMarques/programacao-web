@@ -15,15 +15,11 @@ class ProdutoController
     }
 
     public function novo() {
-        /*$categoria = new CategoriaDAO();
-        $categoriaData = $categoria->getByName($_POST['nome_categoria']);
-        */
 
         $produto = new Produto(
             $_POST['nome'],
             $_POST['valor'],
-            $_POST['categoria_id'],
-            //$categoriaData['id'],
+            $_POST['categoria_id']
         );
 
 

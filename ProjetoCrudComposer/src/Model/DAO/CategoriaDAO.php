@@ -13,53 +13,22 @@ class CategoriaDAO
         $this->conexao = new Conexao();
     }
 
-    /**
-     * @return Conexao
-     */
-    public function getConexao(): Conexao
-    {
-        return $this->conexao;
-    }
 
-    /**
-     * @param Conexao $conexao
-     */
-    public function setConexao(Conexao $conexao)
+    public function inserir(Categoria $categoria)
     {
-        $this->conexao = $conexao;
-    }
-
-    public function inserir(Categoria $categoria) {
         $sql = 'insert into categoria (nome) values (:nome)';
         $p = $this->conexao->getConexao()->prepare($sql);
         $p->bindValue(':nome', $categoria->getNome());
         return $p->execute();
     }
 
-    /*public function getByName(string $nomeCategoria)
+    public function getAll()
     {
-        try {
-            $sql = 'select * from categoria where nome = :nome';
-            $p = $this->conexao->getConexao()->prepare($sql);
-            $p->bindValue(':nome', $nomeCategoria);
+        $sql = 'select * from categoria ';
+        $p = $this->conexao->getConexao()->query($sql);
 
-            return $p->fetch();
-        } catch (\Exception $exception) {
-            return 0;
-        }
-    }*/
-
-    /*public function getAll(string $categorias)
-    {
-        try {
-            $sql = 'select * from categoria where nome = :nome';
-            $p = $this->conexao->getConexao()->prepare($sql);
-            $p->bindValue(':nome', $categorias);
-
-            return $p->fetch();
-        } catch (\Exception $exception) {
-            return 0;
-        }
-    }*/
+        $row = $p->fetchAll(\PDO::FETCH_ASSOC);
+        return $row;
+    }
 
 }

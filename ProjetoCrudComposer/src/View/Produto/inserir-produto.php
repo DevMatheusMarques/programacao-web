@@ -1,8 +1,7 @@
 <?php
 
-//$categoria = new \Php\Primeiroprojeto\Model\DAO\CategoriaDAO();
-
-//$categorias = $categoria->getAll(_GET['categorias']);
+$categoriaDao = new \Php\Primeiroprojeto\Model\DAO\CategoriaDAO;
+$categorias = $categoriaDao->getAll();
 
 ?>
 
@@ -31,18 +30,14 @@
                 <input type="text" class="form-control" id="valor" name="valor" aria-describedby="valor">
             </div>
             <div class="mb-3">
-                <label for="categoria_id" class="form-label">Selecione a categoria do produto:</label>
-                <input type="number" class="form-control" id="categoria_id" name="categoria_id" aria-describedby="categoria_id">
-            </div>
-            <!--<div class="mb-3">
-                <label for="nome" class="form-label">Selecione a categoria do produto:</label><br>
-                <select name="categorias" id="categorias" class="form-control">
-                    <option></option>
-                    <option>Roupas</option>
-                    <option>Acessórios</option>
-                    <option>Tenis</option>
+                <label for="categoria_id" class="form-label">Selecione a categoria do produto:</label><br>
+                <select name="categorias" id="categoria_id" class="form-control">
+                    <option selected value="">Escolha uma opção</option>
+                    <?php foreach ($categorias as $categoria) : ?>
+                        <option value="<?= $categoria['id']; ?>"><?= $categoria['nome'];?></option>
+                    <?php endforeach; ?>
                 </select>
-            </div>-->
+            </div>
             <div class="mb-3">
                 <button type="submit" class="btn bg-info-subtle mt-5">Cadastrar</button>
             </div>

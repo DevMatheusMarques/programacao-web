@@ -33,24 +33,6 @@ class HomeController
 
         $mensagem = "O menor número é {$menorNumero} e sua posição na sequência de entrada é {$posicao}.";
         echo "<script>alert('{$mensagem}')</script>";
-
-        /**ANTES*/
-//        if ($_POST['numero1'] !== null && isset($_POST['numero2'], $_POST['numero3'], $_POST['numero4'], $_POST['numero5'], $_POST['numero6'], $_POST['numero7'])) {
-//            $numeros = [];
-//            for ($i = 1; $i <= 7; $i++) {
-//                $numero = $_POST['numero' . $i];
-//                if (!in_array($numero, $numeros)) {
-//                    $numeros[] = $numero;
-//                }
-//            }
-//
-//            $menorNumero = min($numeros);
-//            $posicao = array_search($menorNumero, $numeros) + 1;
-//
-//            $mensagem = "O menor número é {$menorNumero} e sua posição na sequência de entrada é {$posicao}.";
-//
-//            require_once '..\src\View\exercicio2.php';
-//        }
     }
 
     public function renderizaOExercicio2()

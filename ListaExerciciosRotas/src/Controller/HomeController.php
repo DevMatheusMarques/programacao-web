@@ -110,5 +110,17 @@ class HomeController
         require_once '..\src\View\exercicio7.php';
     }
 
+    public function ex8() {
+        $area = $_POST['tamanho'];
+        $litros = $area / 3;
+        $lata = ceil($litros / 18);;
+        $valor = $lata * 80;
 
+        echo "
+            <script>
+                alert('Você precisará de $lata latas de tinta. O preço total será de: R$ $valor')
+            </script>";
+
+        require_once '..\src\View\exercicio8.php';
+    }
 }

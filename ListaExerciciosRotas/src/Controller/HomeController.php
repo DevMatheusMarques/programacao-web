@@ -100,5 +100,15 @@ class HomeController
         require_once '..\src\View\exercicio6.php';
     }
 
+    public function ex7() {
+        $valor = $_POST['valor'];
+
+        $conversao = $valor * 100;
+
+        echo "<script>alert('$valor metros equivale a $conversao centímetros.')</script>";
+
+        require_once '..\src\View\exercicio7.php';
+    }
+
 
 }

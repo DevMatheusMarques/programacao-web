@@ -21,22 +21,38 @@ class HomeController
 
     public function ex2()
     {
-        for ($i = 1; $i <= 7; $i++) {
-            $numeros[$i] = $_POST['numero' . $i];
-        }
-        if (in_array(null, $numeros)) {
-            echo 'Verifique os dados e tente novamente (todos os números são obrigatórios)';
-            exit();
-        }
-        $menorNumero = min($numeros);
-        $posicao = array_search($menorNumero, $numeros);
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            for ($i = 1; $i <= 7; $i++) {
+                $numeros[$i] = $_POST['numero' . $i];
+            }
+            if (in_array(null, $numeros)) {
+                echo "<script>alert('Verifique os dados e tente novamente (todos os números são obrigatórios)')</script>";
+                exit();
+            }
+            $menorNumero = min($numeros);
+            $posicao = array_search($menorNumero, $numeros);
 
-        $mensagem = "O menor número é {$menorNumero} e sua posição na sequência de entrada é {$posicao}.";
-        echo "<script>alert('{$mensagem}')</script>";
-    }
-
-    public function renderizaOExercicio2()
-    {
+            $mensagem = "O menor número é {$menorNumero} e sua posição na sequência de entrada é {$posicao}.";
+        }
         require_once '..\src\View\exercicio2.php';
     }
+
+    public function ex3() {
+        $valor1 = $_POST['valor1'];
+        $valor2 = $_POST['valor2'];
+
+        if($valor1 === $valor2) {
+            $somaValores = $valor1 + $valor2;
+            $multiplicacao = $somaValores * 3;
+
+            echo "<script>alert('Resultado da soma é: {$multiplicacao}')</script>";
+        } else {
+            $somaValores = $valor1 + $valor2;
+            echo "<script>alert('Resultado da soma é: {$somaValores}')</script>";
+        }
+
+        require_once '..\src\View\exercicio3.php';
+    }
+
+
 }

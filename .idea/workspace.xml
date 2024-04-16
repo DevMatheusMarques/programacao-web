@@ -5,50 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f5d0d2a-51dc-444a-a75d-ea9bcc123128" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/ListaExerciciosRotas/src/View/exercicio3.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exercicio4.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exercicio5.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/56925dfe-9de3-464a-8283-ee022fc6b3d4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/56925dfe-9de3-464a-8283-ee022fc6b3d4/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/56925dfe-9de3-464a-8283-ee022fc6b3d4/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/56925dfe-9de3-464a-8283-ee022fc6b3d4/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/56925dfe-9de3-464a-8283-ee022fc6b3d4/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/97e579cf-3dc2-48d6-b7df-f618fe2e5633.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/97e579cf-3dc2-48d6-b7df-f618fe2e5633.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_04_2024_17_56__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ListaExerciciosRotas/bootstrap.php" beforeDir="false" afterPath="$PROJECT_DIR$/ListaExerciciosRotas/bootstrap.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ListaExerciciosRotas/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/ListaExerciciosRotas/src/Controller/HomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ListaExerciciosRotas/src/View/exercicio1.php" beforeDir="false" afterPath="$PROJECT_DIR$/ListaExerciciosRotas/src/View/exercicio1.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoCrudComposer/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoCrudComposer/.idea/ProjetoCrudComposer.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoCrudComposer/.idea/dataSources.local.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoCrudComposer/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoCrudComposer/.idea/dataSources/794c7665-7aad-4e9c-b5d9-308edce52226.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoCrudComposer/.idea/dataSources/794c7665-7aad-4e9c-b5d9-308edce52226/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoCrudComposer/.idea/dataSources/794c7665-7aad-4e9c-b5d9-308edce52226/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoCrudComposer/.idea/dataSources/794c7665-7aad-4e9c-b5d9-308edce52226/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoCrudComposer/.idea/dataSources/794c7665-7aad-4e9c-b5d9-308edce52226/storage_v2/_src_/schema/programacaoweb.gKalMA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoCrudComposer/.idea/dataSources/794c7665-7aad-4e9c-b5d9-308edce52226/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoCrudComposer/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoCrudComposer/.idea/php.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoCrudComposer/.idea/sqldialects.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoCrudComposer/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoCrudComposer/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoCrudComposer/banco.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoCrudComposer/bootstrap.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoCrudComposer/composer.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoCrudComposer/composer.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoCrudComposer/public/index.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoCrudComposer/src/Controller/CategoriaController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoCrudComposer/src/Controller/ClienteController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoCrudComposer/src/Controller/FornecedorController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoCrudComposer/src/Controller/ProdutoController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoCrudComposer/src/Model/DAO/CategoriaDAO.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoCrudComposer/src/Model/DAO/ClienteDAO.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoCrudComposer/src/Model/DAO/Conexao.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoCrudComposer/src/Model/DAO/FornecedorDAO.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoCrudComposer/src/Model/DAO/ProdutoDAO.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoCrudComposer/src/Model/Domain/Categoria.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoCrudComposer/src/Model/Domain/Cliente.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoCrudComposer/src/Model/Domain/Fornecedor.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoCrudComposer/src/Model/Domain/Produto.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoCrudComposer/src/Router.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoCrudComposer/src/View/Categoria/inserir-categoria.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoCrudComposer/src/View/Cliente/inserir-cliente.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoCrudComposer/src/View/Fornecedor/inserir-fornecedor.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoCrudComposer/src/View/Produto/inserir-produto.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ListaExerciciosRotas/src/View/exercicio2.php" beforeDir="false" afterPath="$PROJECT_DIR$/ListaExerciciosRotas/src/View/exercicio2.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,6 +50,7 @@
       <path value="$PROJECT_DIR$/vendor/composer" />
       <path value="$PROJECT_DIR$/PrimeiroProjetoComposer/vendor/composer" />
       <path value="$PROJECT_DIR$/ListaExerciciosRotas/vendor/composer" />
+      <path value="$PROJECT_DIR$/ProjetoCrudComposer/vendor/composer" />
     </include_path>
   </component>
   <component name="ProjectColorInfo">{
@@ -88,25 +61,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "D:/Faculdade/5° Módulo/Programação Web/ProjetosComposer/ProjetoCrudComposer",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Faculdade/5° Módulo/Programação Web/ProjetosComposer/ListaExerciciosRotas/src/View&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Faculdade\5° Módulo\Programação Web\ProjetosComposer\ListaExerciciosRotas\src\View" />
       <recent name="D:\Faculdade\5° Módulo\Programação Web\ProjetosComposer\ProjetoCrudComposer" />
     </key>
   </component>
@@ -118,7 +93,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1713135977449</updated>
-      <workItem from="1713135981028" duration="4982000" />
+      <workItem from="1713135981028" duration="6572000" />
+      <workItem from="1713230969285" duration="635000" />
     </task>
     <servers />
   </component>

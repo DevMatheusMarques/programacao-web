@@ -33,11 +33,3 @@
 <footer></footer>
 </body>
 </html>
-
-<?php
-
-if(isset($mensagem)) {
-    echo "<script>alert('{$mensagem}')</script>";
-}
-
-?>

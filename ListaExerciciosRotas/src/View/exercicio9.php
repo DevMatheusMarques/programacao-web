@@ -29,7 +29,6 @@
                 <button type="submit" class="btn bg-info-subtle mt-5">Calcular</button>
             </div>
         </form>
-        <div id="resposta"></div>
     </div>
 </main>
 <footer></footer>

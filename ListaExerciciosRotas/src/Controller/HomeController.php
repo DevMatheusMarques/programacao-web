@@ -32,7 +32,7 @@ class HomeController
             $menorNumero = min($numeros);
             $posicao = array_search($menorNumero, $numeros);
 
-            $mensagem = "O menor número é {$menorNumero} e sua posição na sequência de entrada é {$posicao}.";
+            $mensagem = "O menor número é $menorNumero e sua posição na sequência de entrada é $posicao.";
         }
         require_once '..\src\View\exercicio2.php';
     }
@@ -45,10 +45,10 @@ class HomeController
             $somaValores = $valor1 + $valor2;
             $multiplicacao = $somaValores * 3;
 
-            echo "<script>alert('Resultado da soma é: {$multiplicacao}')</script>";
+            echo "<script>alert('Resultado da soma é: $multiplicacao')</script>";
         } else {
             $somaValores = $valor1 + $valor2;
-            echo "<script>alert('Resultado da soma é: {$somaValores}')</script>";
+            echo "<script>alert('Resultado da soma é: $somaValores')</script>";
         }
 
         require_once '..\src\View\exercicio3.php';
@@ -56,6 +56,7 @@ class HomeController
 
     public function ex4() {
         require_once '..\src\View\exercicio4.php';
+
         $numero = $_POST['numero'];
 
         echo "
@@ -65,7 +66,7 @@ class HomeController
             ";
 
         for($i = 0; $i <=10; $i++) {
-            echo "conteudo += '{$numero} x {$i} = " . ($numero * $i) . "<br>';";
+            echo "conteudo += '$numero x {$i} = " . ($numero * $i) . "<br>';";
         }
 
         echo "
@@ -79,9 +80,25 @@ class HomeController
 
         $fatorial = ($numero * 2) * 1;
 
-        echo "<script>alert('O fatorial do número {$numero} é {$fatorial}')</script>";
+        echo "<script>alert('O fatorial do número $numero é $fatorial')</script>";
 
         require_once '..\src\View\exercicio5.php';
     }
+
+    public function ex6() {
+        $valorA = $_POST['valorA'];
+        $valorB = $_POST['valorB'];
+
+        if ($valorA == $valorB) {
+            echo "<script>alert('Números iguais: $valorA')</script>";
+        } elseif ($valorA < $valorB) {
+            echo "<script>alert('$valorA $valorB')</script>";
+        } else {
+            echo "<script>alert('$valorB $valorA')</script>";
+        }
+
+        require_once '..\src\View\exercicio6.php';
+    }
+
 
 }

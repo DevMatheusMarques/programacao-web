@@ -74,5 +74,14 @@ class HomeController
             ";
     }
 
+    public function ex5() {
+        $numero = $_POST['numero'];
+
+        $fatorial = ($numero * 2) * 1;
+
+        echo "<script>alert('O fatorial do número {$numero} é {$fatorial}')</script>";
+
+        require_once '..\src\View\exercicio5.php';
+    }
 
 }

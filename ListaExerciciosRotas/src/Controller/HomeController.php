@@ -54,5 +54,25 @@ class HomeController
         require_once '..\src\View\exercicio3.php';
     }
 
+    public function ex4() {
+        require_once '..\src\View\exercicio4.php';
+        $numero = $_POST['numero'];
+
+        echo "
+            <script>
+                const tabuada = document.getElementById('tabuada');
+                let conteudo = '';
+            ";
+
+        for($i = 0; $i <=10; $i++) {
+            echo "conteudo += '{$numero} x {$i} = " . ($numero * $i) . "<br>';";
+        }
+
+        echo "
+                tabuada.innerHTML = conteudo;
+            </script>
+            ";
+    }
+
 
 }

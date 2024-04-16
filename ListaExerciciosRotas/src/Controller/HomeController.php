@@ -118,9 +118,30 @@ class HomeController
 
         echo "
             <script>
-                alert('Você precisará de $lata latas de tinta. O preço total será de: R$ $valor')
+                alert('Você precisará de $lata latas de tinta.\\n' +
+                'O preço total será de: R$ $valor')
             </script>";
 
         require_once '..\src\View\exercicio8.php';
+    }
+
+    public function ex9() {
+        $anoNascimento = $_POST['ano'];
+
+        $anoAtual = 2024;
+
+        $idade = $anoAtual - $anoNascimento;
+
+        $dias = $idade * 365;
+
+        $idade2025 = 2025 - $anoNascimento;
+
+
+
+        echo "<script>alert('A idade atual desta pessoa é " . $idade . " anos.\\n" .
+            "Esta pessoa já viveu " . $dias . " dias.\\n" .
+            "Em 2025 a pessoa terá " . $idade2025 . " anos.')</script>";
+
+        require_once '..\src\View\exercicio9.php';
     }
 }

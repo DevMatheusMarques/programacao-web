@@ -19,20 +19,23 @@
             sobre este índice (o que é considerado normal, abaixo ou acima do peso). Inclua a referência (página
             de acesso) para que a pessoa leia sobre este assunto.
         </p>
-        <form action="/exercicio10" class="card-body shadow p-3" method="post">
-            <div class="mb-3">
-                <label for="peso" class="form-label">Informe o peso (em kg):</label>
-                <input type="number" class="form-control" id="peso" name="peso" aria-describedby="peso" step="0.01">
-            </div>
-            <div class="mb-3">
-                <label for="altura" class="form-label">Informe a altura (em metros):</label>
-                <input type="number" class="form-control" id="altura" name="altura" aria-describedby="altura" step="0.01">
-            </div>
-            <div class="mb-3">
-                <button type="submit" class="btn bg-info-subtle mt-5">Calcular IMC</button>
-            </div>
-        </form>
-        <div id="resposta"></div>
+        <div class="card-body">
+            <form action="/exercicio10" class="" method="post">
+                <div class="mb-3">
+                    <label for="peso" class="form-label">Informe o peso (em kg):</label>
+                    <input type="number" class="form-control" id="peso" name="peso" aria-describedby="peso" step="0.01">
+                </div>
+                <div class="mb-3">
+                    <label for="altura" class="form-label">Informe a altura (em metros):</label>
+                    <input type="number" class="form-control" id="altura" name="altura" aria-describedby="altura" step="0.01">
+                </div>
+                <div class="mb-3">
+                    <button type="submit" class="btn bg-info-subtle mt-5">Calcular IMC</button>
+                </div>
+            </form>
+            <p class="mt-5 ms-0">Referência: <a href="https://www.tuasaude.com/imc/">https://www.tuasaude.com/imc/</a></p>
+        </div>
+
     </div>
 </main>
 <footer></footer>

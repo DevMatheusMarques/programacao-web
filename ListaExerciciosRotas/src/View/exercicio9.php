@@ -16,9 +16,12 @@
         <p class="mt-3 ms-3">
             Faça um script PHP que receba de um formulário HTML5 uma variável com o ano de nascimento de
             uma pessoa, crie uma constante com o ano atual, calcule e mostre:
-            a. a idade dessa pessoa em anos;
-            b. quantos dias esta pessoa já viveu;
-            c. quantos anos essa pessoa terá em 2025
+            <br><br>
+            A: a idade dessa pessoa em anos;
+            <br><br>
+            B: quantos dias esta pessoa já viveu;
+            <br><br>
+            C: quantos anos essa pessoa terá em 2025
         </p>
         <form action="/exercicio9" class="card-body shadow p-3" method="post">
             <div class="mb-3">

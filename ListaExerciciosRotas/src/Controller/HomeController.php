@@ -109,9 +109,13 @@ class HomeController
         $numero = isset($_POST['numero']) && is_numeric($_POST['numero']) ? $_POST['numero'] : null;
 
         if ($numero !== null) {
-            $fatorial = ($numero * 2) * 1;
+            $fatorial = 1;
+            for ($i = 1; $i <= $numero; $i++) {
+                $fatorial *= $i;
+            }
+            echo "<script>alert('O fatorial do número $numero é $fatorial')</script>";;
 
-            echo "<script>alert('O fatorial do número $numero é $fatorial')</script>";
+
         } else {
             echo "<script>alert('Preencha o campo de número corretamente.')</script>";
         }
@@ -182,9 +186,9 @@ class HomeController
             $dias = $idade * 365;
             $idade2025 = 2025 - $anoNascimento;
 
-            echo "<script>alert('A idade atual desta pessoa é " . $idade . " anos.\\n" .
-                "Esta pessoa já viveu " . $dias . " dias.\\n" .
-                "Em 2025 a pessoa terá " . $idade2025 . " anos.')</script>";
+            echo "<script>alert('A: A idade atual desta pessoa é " . $idade . " anos.\\n" .
+                "B: Esta pessoa já viveu " . $dias . " dias.\\n" .
+                "C: Em 2025 a pessoa terá " . $idade2025 . " anos.')</script>";
         } else {
             echo "<script>alert('Preencha o campo do ano de nascimento corretamente.')</script>";
         }

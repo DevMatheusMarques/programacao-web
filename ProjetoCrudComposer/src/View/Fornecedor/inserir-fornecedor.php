@@ -3,6 +3,8 @@
 $produtoDao = new \Php\Primeiroprojeto\Model\DAO\ProdutoDAO;
 $produtos = $produtoDao->getAll();
 
+$categoriaDao = new \Php\Primeiroprojeto\Model\DAO\CategoriaDAO;
+$categorias = $categoriaDao->getAll();
 ?>
 
 <!DOCTYPE html>
@@ -34,15 +36,20 @@ $produtos = $produtoDao->getAll();
                 <input type="tel" class="form-control" id="telefone" name="telefone" aria-describedby="telefone">
             </div>
             <div class="mb-3">
-                <label for="produto_id" class="form-label">Informe o ID do produto fornecido:</label>
-                <input type="number" class="form-control" id="produto_id" name="produto_id" aria-describedby="produto_id">
-            </div>
-            <div class="mb-3">
-                <label for="categoria_id" class="form-label">Selecione a categoria do produto:</label><br>
-                <select name="categorias" id="categoria_id" class="form-control">
+                <label for="produto_id" class="form-label">Selecione o produto fornecido:</label>
+                <select name="produto_id" id="produto_id" class="form-control" aria-describedby="produto_id">>
                     <option selected value="">Escolha uma opção</option>
                     <?php foreach ($produtos as $produto) : ?>
                         <option value="<?= $produto['id']; ?>"><?= $produto['nome'];?></option>
+                    <?php endforeach; ?>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="categoria_id" class="form-label">Selecione a categoria do produto:</label><br>
+                <select name="categoria_id" id="categoria_id" class="form-control" aria-describedby="categoria_id">>
+                    <option selected value="">Escolha uma opção</option>
+                    <?php foreach ($categorias as $categoria) : ?>
+                        <option value="<?= $categoria['id']; ?>"><?= $categoria['nome'];?></option>
                     <?php endforeach; ?>
                 </select>
             </div>

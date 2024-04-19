@@ -1,5 +1,10 @@
 <?php
 
+use Php\Primeiroprojeto\Controller\CategoriaController;
+use Php\Primeiroprojeto\Controller\ClienteController;
+use Php\Primeiroprojeto\Controller\FornecedorController;
+use Php\Primeiroprojeto\Controller\ProdutoController;
+
 require __DIR__.'/vendor/autoload.php';
 
 $method = $_SERVER['REQUEST_METHOD'];
@@ -9,13 +14,13 @@ $router = new Php\Primeiroprojeto\Router($method, $path);
 
 #Rotas
 
-$categoriaController = new \Php\Primeiroprojeto\Controller\CategoriaController();
+$categoriaController = new CategoriaController();
 
-$produtoController = new \Php\Primeiroprojeto\Controller\ProdutoController();
+$produtoController = new ProdutoController();
 
-$fornecedorController = new \Php\Primeiroprojeto\Controller\FornecedorController();
+$fornecedorController = new FornecedorController();
 
-$clienteController = new \Php\Primeiroprojeto\Controller\ClienteController();
+$clienteController = new ClienteController();
 
 $router->get('/categoria/inserir', [$categoriaController, 'inserir']);
 

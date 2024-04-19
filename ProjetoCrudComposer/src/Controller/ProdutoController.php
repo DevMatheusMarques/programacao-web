@@ -7,10 +7,9 @@ use Php\Primeiroprojeto\Model\DAO\ProdutoDAO;
 use Php\Primeiroprojeto\Model\Domain\Categoria;
 use Php\Primeiroprojeto\Model\Domain\Produto;
 
-// arrumar o inserir produto, adicionando os inputs necessários
 class ProdutoController
 {
-    public function inserir($params) {
+    public function inserir() {
         require_once '..\src\View\Produto\inserir-produto.php';
     }
 
@@ -18,6 +17,7 @@ class ProdutoController
 
         $produto = new Produto(
             $_POST['nome'],
+            $_POST['quantidade'],
             $_POST['valor'],
             $_POST['categoria_id']
         );

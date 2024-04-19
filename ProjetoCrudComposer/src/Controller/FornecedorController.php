@@ -7,22 +7,18 @@ use Php\Primeiroprojeto\Model\Domain\Fornecedor;
 
 class FornecedorController
 {
-    public function inserir($params) {
+    public function inserir() {
         require_once '..\src\View\Fornecedor\inserir-fornecedor.php';
     }
 
     public function novo()
     {
-        /*$categoria = new CategoriaDAO();
-        $categoriaData = $categoria->getByName($_POST['nome_categoria']);
-        */
-
         $fornecedor = new Fornecedor(
             $_POST['nome'],
             $_POST['endereco'],
             $_POST['telefone'],
             $_POST['produto_id'],
-        //$categoriaData['id'],
+            $_POST['categoria_id'],
         );
 
 

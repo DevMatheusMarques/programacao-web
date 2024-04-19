@@ -4,15 +4,16 @@ namespace Php\Primeiroprojeto\Model\Domain;
 
 class Produto
 {
-//    private $id;
     protected string $nome;
+    protected string $quantidade;
     protected float $valor;
     protected int $categoria_id;
 
 
-    public function __construct($nome, $valor, $categoria_id)
+    public function __construct($nome, $quantidade, $valor, $categoria_id)
     {
         $this->setNome($nome);
+        $this->setQuantidade($quantidade);
         $this->setValor($valor);
         $this->setCategoriaId($categoria_id);
     }
@@ -26,6 +27,14 @@ class Produto
     }
 
     /**
+     * @return int
+     */
+    public function getQuantidade(): int
+    {
+        return $this->quantidade;
+    }
+
+    /**
      * @return float
      */
     public function getValor(): float
@@ -36,7 +45,7 @@ class Produto
     /**
      * @param int $categoria_id
      */
-    public function setCategoriaId(int $categoria_id): void
+    public function setCategoriaId(int $categoria_id)
     {
         $this->categoria_id = $categoria_id;
     }
@@ -49,6 +58,13 @@ class Produto
         $this->valor = $valor;
     }
 
+    /**
+     * @param int $quantidade
+     */
+    public function setQuantidade(int $quantidade): void
+    {
+        $this->quantidade = $quantidade;
+    }
 
     /**
      * @return mixed

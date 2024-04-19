@@ -14,9 +14,10 @@ class ProdutoDAO
     }
 
     public function inserir(Produto $produto) {
-        $sql = 'insert into produto (nome, valor, categoria_id) values (:nome, :valor, :categoria_id)';
+        $sql = 'insert into produto (nome, quantidade, valor, categoria_id) values (:nome, :quantidade, :valor, :categoria_id)';
         $p = $this->conexao->getConexao()->prepare($sql);
         $p->bindValue(':nome', $produto->getNome());
+        $p->bindValue(':quantidade', $produto->getQuantidade());
         $p->bindValue(':valor', $produto->getValor());
         $p->bindValue(':categoria_id', $produto->getCategoriaId());
         return $p->execute();

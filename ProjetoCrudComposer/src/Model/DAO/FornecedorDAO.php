@@ -15,12 +15,13 @@ class FornecedorDAO
 
     public function inserir(Fornecedor $fornecedor): bool
     {
-        $sql = 'insert into fornecedor (nome, endereco, telefone, produto_id) values (:nome, :endereco, :telefone, :produto_id)';
+        $sql = 'insert into fornecedor (nome, endereco, telefone, produto_id, categoria_id) values (:nome, :endereco, :telefone, :produto_id, :categoria_id)';
         $p = $this->conexao->getConexao()->prepare($sql);
         $p->bindValue(':nome', $fornecedor->getNome());
         $p->bindValue(':endereco', $fornecedor->getEndereco());
         $p->bindValue(':telefone', $fornecedor->getTelefone());
         $p->bindValue(':produto_id', $fornecedor->getProdutoId());
+        $p->bindValue(':categoria_id', $fornecedor->getCategoriaId());
         return $p->execute();
     }
 }

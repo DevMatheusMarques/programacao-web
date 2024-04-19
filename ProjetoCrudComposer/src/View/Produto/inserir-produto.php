@@ -23,7 +23,11 @@ $categorias = $categoriaDao->getAll();
         <form action="/produto/novo" class="card-body shadow p-3" method="post">
             <div class="mb-3">
                 <label for="nome" class="form-label">Informe o nome:</label>
-                <input type="text" class="form-control" id="nome" name="nome" aria-describedby="produto">
+                <input type="text" class="form-control" id="nome" name="nome" aria-describedby="nome">
+            </div>
+            <div class="mb-3">
+                <label for="quantidade" class="form-label">Informe a quantidade:</label>
+                <input type="number" class="form-control" id="quantidade" name="quantidade" aria-describedby="quantidade">
             </div>
             <div class="mb-3">
                 <label for="valor" class="form-label">Informe o valor do produto:</label>
@@ -31,7 +35,7 @@ $categorias = $categoriaDao->getAll();
             </div>
             <div class="mb-3">
                 <label for="categoria_id" class="form-label">Selecione a categoria do produto:</label><br>
-                <select name="categorias" id="categoria_id" class="form-control">
+                <select name="categoria_id" id="categoria_id" class="form-control" aria-describedby="categoria_id">>
                     <option selected value="">Escolha uma opção</option>
                     <?php foreach ($categorias as $categoria) : ?>
                         <option value="<?= $categoria['id']; ?>"><?= $categoria['nome'];?></option>

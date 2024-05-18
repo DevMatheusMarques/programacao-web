@@ -33,7 +33,7 @@ class ClienteController
         if ($clienteDAO->getAll()) {
             require_once '../src/View/Cliente/exibir-cliente.php';
         } else {
-            return '<script> alert("Erro ao encontrar dados!")</script>';
+            require_once '../src/View/Cliente/exibir-cliente.php';
         }
     }
 
@@ -100,11 +100,9 @@ class ClienteController
         $result = $clienteDAO->excluir($idInt);
 
         if ($result) {
-            echo '<script> alert("Cliente excluído com sucesso")</script>';
             header("Location: /cliente?excluir=true");
             exit();
         } else {
-            echo '<script> alert("Erro ao excluir cliente!")</script>';
             header("Location: /cliente?excluir=false");
             exit();
         }

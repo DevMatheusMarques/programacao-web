@@ -64,6 +64,8 @@ $router->get('/cliente/alterar/{id}', [$clienteController, 'alterar']);
 
 $router->post('/cliente/alterar/novo', [$clienteController, 'alterarNovo']);
 
+$router->post('/cliente/excluir/{id}', [$clienteController, 'excluir']);
+
 #Rotas
 
 $result = $router->handler();

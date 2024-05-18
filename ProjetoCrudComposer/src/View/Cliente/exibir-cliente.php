@@ -81,5 +81,33 @@ $clientes = $clienteDao->getAll();
     </div>
 </main>
 <footer></footer>
+<script>
+    const btnSubmit = document.querySelectorAll('a[type="submit"]');
+    btnSubmit.forEach((btn) => {
+        btn.addEventListener('click', function (event) {
+            event.preventDefault();
+            Swal.fire({
+                title: "Tem certeza?",
+                text: "Você não poderá reverter isso!",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Sim, excluir!"
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    Swal.fire({
+                        title: "Excluído!",
+                        text: "Cliente excluído com sucesso.",
+                        icon: "success"
+                    }).then(() => {
+                        const form = btn.closest('form');
+                        form.submit();
+                    });
+                }
+            });
+        });
+    });
+</script>
 </body>
 </html>

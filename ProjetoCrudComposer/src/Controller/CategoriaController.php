@@ -97,18 +97,11 @@ class CategoriaController
         $idInt = intval($id[1]);
         $categoriaDAO = new CategoriaDAO();
         $result = $categoriaDAO->excluir($idInt);
-//        echo '<pre>';
-//        var_dump($result);
-//        echo '</pre>';
-//        die();
-
 
         if ($result) {
-            echo '<script> alert("Categoria excluída com sucesso")</script>';
             header("Location: /categoria?excluir=true");
             exit();
         } else {
-            echo '<script> alert("Erro ao excluir categoria!")</script>';
             header("Location: /categoria?excluir=false");
             exit();
         }

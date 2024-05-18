@@ -133,7 +133,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (result.isConfirmed) {
                     Swal.fire({
                         title: "Excluído!",
-                        text: "Categoria excluída.",
+                        text: "Categoria excluída com sucesso.",
                         icon: "success"
                     }).then(() => {
                         const form = btn.closest('form');

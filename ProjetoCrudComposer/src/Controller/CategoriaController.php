@@ -7,18 +7,110 @@ use Php\Primeiroprojeto\Model\Domain\Categoria;
 
 class CategoriaController
 {
-    public function inserir() {
-        require_once '..\src\View\Categoria\inserir-categoria.php';
+    public function inserir()
+    {
+        require_once '../src/View/Categoria/inserir-categoria.php';
     }
 
-    public function novo()
+    public function inserirNovo()
     {
         $categoria = new Categoria($_POST['nome']);
         $categoriaDAO = new CategoriaDAO();
         if ($categoriaDAO->inserir($categoria)) {
-            return '<script> alert("Categoria cadastrada com sucesso")</script>';
+            header("Location: /categoria?inserir=true");
         } else {
-            return '<script> alert("Erro ao cadastrar categoria!")</script>';
+            header("Location: /categoria?inserir=false");
+        }
+        exit();
+    }
+
+    public function exibir()
+    {
+        $categoriaDAO = new CategoriaDAO();
+
+
+        if ($categoriaDAO->getAll()) {
+            require_once '../src/View/Categoria/exibir-categoria.php';
+        } else {
+            require_once '../src/View/Categoria/exibir-categoria.php';
+        }
+    }
+
+    public function alterar($id)
+    {
+        require_once '../src/View/Categoria/alterar-categoria.php';
+    }
+
+    public function alterarNovo()
+    {
+        $id = $_POST['id'];
+        $categoria = new Categoria($_POST['nome']);
+        $categoriaDAO = new CategoriaDAO();
+
+        if ($categoriaDAO->alterar($categoria, $id)) {
+            echo '<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>';
+            echo '<script>
+            document.addEventListener("DOMContentLoaded", function() {
+                Swal.fire({
+                    title: "Tem certeza?",
+                    text: "Deseja alterar os dados dessa categoria?",
+                    icon: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#3085d6",
+                    cancelButtonColor: "#d33",
+                    confirmButtonText: "Sim, alterar!"
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        Swal.fire({
+                            title: "Alterado!",
+                            text: "Dados da categoria alterados com sucesso.",
+                            icon: "success"
+                        }).then(function() {
+                            window.location.href = "/categoria?alterar=true";
+                        });
+                    } else {
+                        window.location.href = "/categoria/alterar/'.$id.'";
+                    }
+                });
+            });
+          </script>';
+            exit();
+        } else {
+            echo '<script> 
+            document.addEventListener("DOMContentLoaded", function() {
+                Swal.fire({
+                    icon: "error",
+                    title: "Ops...",
+                    text: "Erro ao alterar categoria",
+                }).then(function() {
+                    window.location.href = "/categoria/alterar/'.$id.'";
+                });
+            });
+          </script>';
+            exit();
+        }
+    }
+
+    public function excluir($id)
+    {
+
+        $idInt = intval($id[1]);
+        $categoriaDAO = new CategoriaDAO();
+        $result = $categoriaDAO->excluir($idInt);
+//        echo '<pre>';
+//        var_dump($result);
+//        echo '</pre>';
+//        die();
+
+
+        if ($result) {
+            echo '<script> alert("Categoria excluída com sucesso")</script>';
+            header("Location: /categoria?excluir=true");
+            exit();
+        } else {
+            echo '<script> alert("Erro ao excluir categoria!")</script>';
+            header("Location: /categoria?excluir=false");
+            exit();
         }
     }
 }

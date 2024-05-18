@@ -5,14 +5,16 @@ namespace Php\Primeiroprojeto\Model\Domain;
 class Fornecedor
 {
     protected string $nome;
+    protected string $cnpj;
     protected string $endereco;
     protected string $telefone;
     protected int $produto_id;
     protected int $categoria_id;
 
-    public function __construct($nome, $endereco, $telefone, $produto_id, $categoria_id)
+    public function __construct($nome, $cnpj, $endereco, $telefone, $produto_id, $categoria_id)
     {
         $this->setNome($nome);
+        $this->setCnpj($cnpj);
         $this->setEndereco($endereco);
         $this->setTelefone($telefone);
         $this->setProdutoId($produto_id);
@@ -33,6 +35,22 @@ class Fornecedor
     public function setNome(string $nome): void
     {
         $this->nome = $nome;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCnpj(): string
+    {
+        return $this->cnpj;
+    }
+
+    /**
+     * @param string $cnpj
+     */
+    public function setCnpj(string $cnpj): void
+    {
+        $this->cnpj = $cnpj;
     }
 
     /**

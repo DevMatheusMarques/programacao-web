@@ -15,6 +15,7 @@ class FornecedorController
     {
         $fornecedor = new Fornecedor(
             $_POST['nome'],
+            $_POST['cnpj'],
             $_POST['endereco'],
             $_POST['telefone'],
             $_POST['produto_id'],
@@ -27,6 +28,16 @@ class FornecedorController
             return '<script> alert("Fornecedor cadastrado com sucesso")</script>';
         } else {
             return '<script> alert("Erro ao cadastrar fornecedor!")</script>';
+        }
+    }
+
+    public function exibir() {
+        $fornecedorDAO = new FornecedorDAO();
+
+        if ($fornecedorDAO->getAll()) {
+            require_once '../src/View/Fornecedor/exibir-fornecedor.php';
+        } else {
+            return '<script> alert("Erro ao encontrar dados!")</script>';
         }
     }
 }

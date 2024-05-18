@@ -16,7 +16,11 @@ $categorias = $categoriaDao->getAll();
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </head>
 <body>
-<header></header>
+<header>
+    <?php
+    require_once '../src/View/Navegacao/Navbar.php'
+    ?>
+</header>
 <main>
     <div class="card mt-5 mb-5 border border-info-subtle" style="margin-left: 8%; margin-right: 8%;">
         <div class="card-header border border-info-subtle bg-info-subtle">
@@ -26,6 +30,10 @@ $categorias = $categoriaDao->getAll();
             <div class="mb-3">
                 <label for="nome" class="form-label">Informe o nome do fornecedor:</label>
                 <input type="text" class="form-control" id="nome" name="nome" aria-describedby="nome">
+            </div>
+            <div class="mb-3">
+                <label for="cnpj" class="form-label">Informe o CNPJ do fornecedor:</label>
+                <input type="text" class="form-control" id="cnpj" name="cnpj" aria-describedby="cnpj">
             </div>
             <div class="mb-3">
                 <label for="endereco" class="form-label">Informe o endereço:</label>

@@ -30,4 +30,14 @@ class ProdutoController
             return '<script> alert("Erro ao cadastrar produto!")</script>';
         }
     }
+
+    public function exibir() {
+        $produtoDAO = new ProdutoDAO();
+
+        if ($produtoDAO->getAll()) {
+            require_once '../src/View/Produto/exibir-produto.php';
+        } else {
+            return '<script> alert("Erro ao encontrar dados!")</script>';
+        }
+    }
 }

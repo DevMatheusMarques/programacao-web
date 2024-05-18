@@ -22,21 +22,47 @@ $fornecedorController = new FornecedorController();
 
 $clienteController = new ClienteController();
 
+//Categoria
+
+$router->get('/categoria', [$categoriaController, 'exibir']);
+
 $router->get('/categoria/inserir', [$categoriaController, 'inserir']);
 
-$router->post('/categoria/novo', [$categoriaController, 'novo']);
+$router->post('/categoria/inserir/novo', [$categoriaController, 'inserirNovo']);
+
+$router->get('/categoria/alterar/{id}', [$categoriaController, 'alterar']);
+
+$router->post('/categoria/alterar/novo', [$categoriaController, 'alterarNovo']);
+
+$router->post('/categoria/excluir/{id}', [$categoriaController, 'excluir']);
+
+//Produto
+
+$router->get('/produto', [$produtoController, 'exibir']);
 
 $router->get('/produto/inserir', [$produtoController, 'inserir']);
 
 $router->post('/produto/novo', [$produtoController, 'novo']);
 
+//Fornecedor
+
+$router->get('/fornecedor', [$fornecedorController, 'exibir']);
+
 $router->get('/fornecedor/inserir', [$fornecedorController, 'inserir']);
 
 $router->post('/fornecedor/novo', [$fornecedorController, 'novo']);
 
+//Cliente
+
+$router->get('/cliente', [$clienteController, 'exibir']);
+
 $router->get('/cliente/inserir', [$clienteController, 'inserir']);
 
 $router->post('/cliente/novo', [$clienteController, 'novo']);
+
+$router->get('/cliente/alterar/{id}', [$clienteController, 'alterar']);
+
+$router->post('/cliente/alterar/novo', [$clienteController, 'alterarNovo']);
 
 #Rotas
 

@@ -4,28 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f5d0d2a-51dc-444a-a75d-ea9bcc123128" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ProjetoCrudComposer/src/View/Fornecedor/alterar-fornecedor.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoCrudComposer/bootstrap.php" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetoCrudComposer/bootstrap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoCrudComposer/src/Controller/ClienteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetoCrudComposer/src/Controller/ClienteController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoCrudComposer/src/Controller/FornecedorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetoCrudComposer/src/Controller/FornecedorController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoCrudComposer/src/Controller/ProdutoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetoCrudComposer/src/Controller/ProdutoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoCrudComposer/src/Model/DAO/FornecedorDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetoCrudComposer/src/Model/DAO/FornecedorDAO.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoCrudComposer/src/Model/DAO/ProdutoDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetoCrudComposer/src/Model/DAO/ProdutoDAO.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoCrudComposer/src/Model/Domain/Fornecedor.php" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetoCrudComposer/src/Model/Domain/Fornecedor.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoCrudComposer/src/Model/Domain/Produto.php" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetoCrudComposer/src/Model/Domain/Produto.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoCrudComposer/src/View/Categoria/alterar-categoria.php" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetoCrudComposer/src/View/Categoria/alterar-categoria.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoCrudComposer/src/View/Categoria/exibir-categoria.php" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetoCrudComposer/src/View/Categoria/exibir-categoria.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoCrudComposer/src/View/Categoria/inserir-categoria.php" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetoCrudComposer/src/View/Categoria/inserir-categoria.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoCrudComposer/src/View/Cliente/alterar-cliente.php" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetoCrudComposer/src/View/Cliente/alterar-cliente.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoCrudComposer/src/View/Cliente/exibir-cliente.php" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetoCrudComposer/src/View/Cliente/exibir-cliente.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoCrudComposer/src/View/Cliente/inserir-cliente.php" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetoCrudComposer/src/View/Cliente/inserir-cliente.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoCrudComposer/src/View/Fornecedor/exibir-fornecedor.php" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetoCrudComposer/src/View/Fornecedor/exibir-fornecedor.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoCrudComposer/src/View/Fornecedor/inserir-fornecedor.php" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetoCrudComposer/src/View/Fornecedor/inserir-fornecedor.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoCrudComposer/src/View/Produto/exibir-produto.php" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetoCrudComposer/src/View/Produto/exibir-produto.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoCrudComposer/src/View/Produto/inserir-produto.php" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetoCrudComposer/src/View/Produto/inserir-produto.php" afterDir="false" />
-    </list>
+    <list default="true" id="7f5d0d2a-51dc-444a-a75d-ea9bcc123128" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -107,6 +86,7 @@
       <workItem from="1716038280518" duration="3898000" />
       <workItem from="1716053475965" duration="760000" />
       <workItem from="1716149153140" duration="606000" />
+      <workItem from="1717469814290" duration="319000" />
     </task>
     <servers />
   </component>

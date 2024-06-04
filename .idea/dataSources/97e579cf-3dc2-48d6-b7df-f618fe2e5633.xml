@@ -1023,8 +1023,8 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     </schema>
     <schema id="297" parent="1" name="programacaoweb">
       <Current>1</Current>
-      <IntrospectionTimestamp>2024-04-14.19:07:30</IntrospectionTimestamp>
-      <LocalIntrospectionTimestamp>2024-04-15.01:07:30</LocalIntrospectionTimestamp>
+      <IntrospectionTimestamp>2024-06-03.21:27:00</IntrospectionTimestamp>
+      <LocalIntrospectionTimestamp>2024-06-04.03:27:00</LocalIntrospectionTimestamp>
       <CollationName>utf8mb3_general_ci</CollationName>
     </schema>
     <user id="298" parent="1" name="mysql.infoschema">
@@ -1063,7 +1063,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <CollationName>utf8mb3_general_ci</CollationName>
     </table>
     <column id="306" parent="302" name="id">
-      <AutoIncrement>2</AutoIncrement>
+      <AutoIncrement>4</AutoIncrement>
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1084,7 +1084,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="310" parent="303" name="id">
-      <AutoIncrement>2</AutoIncrement>
+      <AutoIncrement>4</AutoIncrement>
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1125,76 +1125,86 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="318" parent="304" name="endereco">
-      <DasType>varchar(150)|0s</DasType>
+    <column id="318" parent="304" name="cnpj">
+      <DasType>varchar(14)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="319" parent="304" name="telefone">
-      <DasType>varchar(11)|0s</DasType>
+    <column id="319" parent="304" name="endereco">
+      <DasType>varchar(150)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="320" parent="304" name="produto_id">
-      <DasType>int|0s</DasType>
+    <column id="320" parent="304" name="telefone">
+      <DasType>varchar(11)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <foreign-key id="321" parent="304" name="fk_fornecedor_produto1">
-      <ColNames>produto_id</ColNames>
-      <RefColNames>id</RefColNames>
-      <RefTableName>produto</RefTableName>
-    </foreign-key>
-    <index id="322" parent="304" name="PRIMARY">
+    <index id="321" parent="304" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="323" parent="304" name="fk_fornecedor_produto1_idx">
-      <ColNames>produto_id</ColNames>
-      <Type>btree</Type>
-    </index>
-    <key id="324" parent="304" name="PRIMARY">
+    <key id="322" parent="304" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="325" parent="305" name="id">
-      <AutoIncrement>2</AutoIncrement>
+    <column id="323" parent="305" name="id">
+      <AutoIncrement>9</AutoIncrement>
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="326" parent="305" name="nome">
-      <DasType>varchar(150)|0s</DasType>
+    <column id="324" parent="305" name="nome">
+      <DasType>varchar(255)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="327" parent="305" name="valor">
-      <DasType>decimal(8,2 digit)|0s</DasType>
+    <column id="325" parent="305" name="quantidade">
+      <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="328" parent="305" name="categoria_id">
-      <DasType>int|0s</DasType>
+    <column id="326" parent="305" name="valor">
+      <DasType>float|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <foreign-key id="329" parent="305" name="fk_produto_Categoria">
+    <column id="327" parent="305" name="categoria_id">
+      <DasType>int|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <column id="328" parent="305" name="fornecedor_id">
+      <DasType>int|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+    </column>
+    <foreign-key id="329" parent="305" name="fk_produto_categoria1">
       <ColNames>categoria_id</ColNames>
       <RefColNames>id</RefColNames>
       <RefTableName>categoria</RefTableName>
     </foreign-key>
-    <index id="330" parent="305" name="PRIMARY">
+    <foreign-key id="330" parent="305" name="fk_produto_fornecedor1">
+      <ColNames>fornecedor_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>fornecedor</RefTableName>
+    </foreign-key>
+    <index id="331" parent="305" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="331" parent="305" name="fk_produto_Categoria_idx">
+    <index id="332" parent="305" name="fk_produto_categoria1_idx">
       <ColNames>categoria_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="332" parent="305" name="PRIMARY">
+    <index id="333" parent="305" name="fk_produto_fornecedor1_idx">
+      <ColNames>fornecedor_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="334" parent="305" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>

@@ -66,11 +66,11 @@ if (isset($_GET['inserir'])) {
         <button type="button" class="btn bg-info-subtle mt-5 mb-2" style="width: 16%; margin-left: 8%;">Cadastrar Novo Fornecedor</button>
     </a>
 
-    <div class="card mt-5 mb-5 border border-info-subtle" style="margin-left: 8%; margin-right: 8%;">
+    <div class="card mt-5 mb-5 border border-info-subtle d-flex row" style="margin-left: 8%; margin-right: 8%;">
         <div class="card-header border border-info-subtle bg-info-subtle">
             <strong>Fornecedores Cadastrados</strong>
         </div>
-        <table class="table">
+        <table class="table" id="table" style="width: 100%">
             <thead>
             <tr>
                 <th scope="col">ID</th>
@@ -106,6 +106,7 @@ if (isset($_GET['inserir'])) {
 </main>
 <footer></footer>
 <script>
+    let table = new DataTable('table');
     document.querySelectorAll('.btn-delete').forEach(btn => {
         btn.addEventListener('click', function (event) {
             event.preventDefault();

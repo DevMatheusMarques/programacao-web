@@ -102,8 +102,11 @@ class CategoriaController
         $categoriaDAO = new CategoriaDAO();
         $result = $categoriaDAO->excluir($idInt);
 
-        if ($result) {
+        if ($result === true) {
             header("Location: /categoria?excluir=true");
+            exit();
+        } else if ($result === 'violation') {
+            header("Location: /categoria?excluir=false&violation=true");
             exit();
         } else {
             header("Location: /categoria?excluir=false");

@@ -42,8 +42,13 @@ class CategoriaDAO
             $p = $this->conexao->getConexao()->prepare($sql);
             $p->bindValue(':id', $id);
             return $p->execute();
-        } catch (\Exception $exception) {
-            return $exception->getMessage();
+        } catch (\Exception $e) {
+            if ($e->getCode() === '23000') {
+                $message = 'violation';
+            } else {
+                $message = $e->getMessage();
+            }
+            return $message;
         }
     }
 

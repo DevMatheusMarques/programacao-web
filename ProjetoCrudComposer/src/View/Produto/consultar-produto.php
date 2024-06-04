@@ -19,7 +19,7 @@ $fornecedores = $fornecedorDao->getAll();
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Alterar Produto</title>
+    <title>Produto: <?= $produto['nome']; ?></title>
     <!-- Icon -->
     <link rel="icon" href="./../public/assets/book-solid.png" type="image/x-icon">
 
@@ -48,7 +48,7 @@ $fornecedores = $fornecedorDao->getAll();
 <main>
     <div class="card mt-5 mb-5 border border-info-subtle" style="margin-left: 8%; margin-right: 8%;">
         <div class="card-header border border-info-subtle bg-info-subtle">
-            Produto: <?= $produto['nome']; ?>
+            <strong>Produto: <?= $produto['nome']; ?></strong>
         </div>
         <form action="/produto/alterar/novo" class="card-body shadow p-3" method="post">
             <div class="mb-3">

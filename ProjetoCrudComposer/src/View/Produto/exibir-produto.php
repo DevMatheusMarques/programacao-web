@@ -64,12 +64,16 @@ document.addEventListener("DOMContentLoaded", function () {
     ?>
 </header>
 <main>
-    <a href="produto/inserir"><button type="button" class="btn bg-info-subtle mt-5 mb-2" style="width: 16%; margin-left: 8%;">Cadastrar Novo Produto</button></a>
-    <div class="card mt-5 mb-5 border border-info-subtle" style="margin-left: 8%; margin-right: 8%;">
+    <a href="produto/inserir">
+        <button type="button" class="btn bg-info-subtle mt-5 mb-2" style="width: 16%; margin-left: 8%;">
+            Cadastrar Novo Produto
+        </button>
+    </a>
+    <div class="card mt-5 mb-5 border border-info-subtle d-flex row" style="margin-left: 8%; margin-right: 8%;">
         <div class="card-header border border-info-subtle bg-info-subtle">
             <strong>Produtos Cadastrados</strong>
         </div>
-        <table class="table">
+        <table class="table" id="table" style="width: 100%">
             <thead>
             <tr>
                 <th scope="col">ID</th>
@@ -82,8 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
             </tr>
             </thead>
             <tbody>
-            <tr>
-                <?php foreach ($produtos as $produto) { ?>
+            <?php foreach ($produtos as $produto) { ?>
             <tr>
                 <td><?= $produto['id']; ?></td>
                 <td><?= $produto['nome']; ?></td>
@@ -115,6 +118,7 @@ document.addEventListener("DOMContentLoaded", function () {
 </main>
 <footer></footer>
 <script>
+    let table = new DataTable('table');
     const btnSubmit = document.querySelectorAll('a[type="submit"]');
     btnSubmit.forEach((btn) => {
         btn.addEventListener('click', function (event) {

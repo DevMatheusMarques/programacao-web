@@ -71,8 +71,8 @@ document.addEventListener("DOMContentLoaded", function () {
 </header>
 <main>
     <a href="categoria/inserir">
-        <button type="button" class="btn bg-info-subtle mt-5 mb-2" style="width: 16%; margin-left: 8%;">Cadastrar Nova
-            Categoria
+        <button type="button" class="btn bg-info-subtle mt-5 mb-2" style="width: 16%; margin-left: 8%;">
+            Cadastrar Nova Categoria
         </button>
     </a>
 
@@ -89,9 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
             </tr>
             </thead>
             <tbody>
-            <?php foreach ($categorias
-
-                           as $categoria) { ?>
+            <?php foreach ($categorias as $categoria) { ?>
                 <tr>
                     <td><?= $categoria['id']; ?></td>
                     <td><?= $categoria['nome']; ?></td>
@@ -110,7 +108,6 @@ document.addEventListener("DOMContentLoaded", function () {
                         </form>
                     </td>
                 </tr>
-
             <?php } ?>
             </tbody>
         </table>
@@ -118,11 +115,7 @@ document.addEventListener("DOMContentLoaded", function () {
 </main>
 <footer></footer>
 <script>
-    let table = new DataTable('table', {
-        // language: {
-        //     url: 'cdn.datatables.net/plug-ins/2.0.5/i18n/pt-BR.json',
-        // },
-    });
+    let table = new DataTable('table');
     const btnSubmit = document.querySelectorAll('a[type="submit"]');
     btnSubmit.forEach((btn) => {
         btn.addEventListener('click', function (event) {
@@ -137,14 +130,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 confirmButtonText: "Sim, excluir!"
             }).then((result) => {
                 if (result.isConfirmed) {
-                    Swal.fire({
-                        title: "Excluído!",
-                        text: "Categoria excluída com sucesso.",
-                        icon: "success"
-                    }).then(() => {
-                        const form = btn.closest('form');
-                        form.submit();
-                    });
+                    const form = btn.closest('form');
+                    form.submit();
                 }
             });
         });
@@ -152,3 +139,35 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 </body>
 </html>
+
+<?php
+if (isset($_GET['excluir']) && $_GET['excluir'] == 'true') {
+    echo '
+        <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            Swal.fire({
+                icon: "success",
+                title: "Excluído!",
+                text: "Categoria excluída com sucesso."
+            }).then(function() {
+                window.location.href = "/categoria";
+            });
+        });
+        </script>';
+}
+
+if (isset($_GET['violation'])) {
+    echo '
+        <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            Swal.fire({
+                icon: "error",
+                title: "Ops...",
+                text: "Categoria possui produto atrelado a ela, por favor exclua os produtos atrelados e tente novamente!"
+            }).then(function() {
+                window.location.href = "/categoria";
+            });
+        });
+        </script>';
+}
+?>

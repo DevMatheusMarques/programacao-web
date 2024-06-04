@@ -24,6 +24,8 @@ $clienteController = new ClienteController();
 
 //Categoria
 
+$router->get('/categoria/consultar/{id}', [$categoriaController, 'consultar']);
+
 $router->get('/categoria', [$categoriaController, 'exibir']);
 
 $router->get('/categoria/inserir', [$categoriaController, 'inserir']);
@@ -38,13 +40,23 @@ $router->post('/categoria/excluir/{id}', [$categoriaController, 'excluir']);
 
 //Produto
 
+$router->get('/produto/consultar/{id}', [$produtoController, 'consultar']);
+
 $router->get('/produto', [$produtoController, 'exibir']);
 
 $router->get('/produto/inserir', [$produtoController, 'inserir']);
 
 $router->post('/produto/novo', [$produtoController, 'novo']);
 
+$router->get('/produto/alterar/{id}', [$produtoController, 'alterar']);
+
+$router->post('/produto/alterar/novo', [$produtoController, 'alterarNovo']);
+
+$router->post('/produto/excluir/{id}', [$produtoController, 'excluir']);
+
 //Fornecedor
+
+$router->get('/fornecedor/consultar/{id}', [$fornecedorController, 'consultar']);
 
 $router->get('/fornecedor', [$fornecedorController, 'exibir']);
 
@@ -52,7 +64,15 @@ $router->get('/fornecedor/inserir', [$fornecedorController, 'inserir']);
 
 $router->post('/fornecedor/novo', [$fornecedorController, 'novo']);
 
+$router->get('/fornecedor/alterar/{id}', [$fornecedorController, 'alterar']);
+
+$router->post('/fornecedor/alterar/novo', [$fornecedorController, 'alterarNovo']);
+
+$router->post('/fornecedor/excluir/{id}', [$fornecedorController, 'excluir']);
+
 //Cliente
+
+$router->get('/cliente/consultar/{id}', [$clienteController, 'consultar']);
 
 $router->get('/cliente', [$clienteController, 'exibir']);
 

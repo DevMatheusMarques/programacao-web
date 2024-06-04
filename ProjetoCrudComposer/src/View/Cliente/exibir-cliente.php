@@ -3,12 +3,42 @@
 $clienteDao = new \Php\Primeiroprojeto\Model\DAO\ClienteDAO;
 $clientes = $clienteDao->getAll();
 
+if (isset($_GET['inserir']) && $_GET['inserir']) {
+    echo '
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    Swal.fire({
+        icon: "success",
+        title: "Concluído",
+        text: "Cliente cadastrado com sucesso",
+    }).then(function() {
+        window.location.href = "/cliente";
+    });
+});
+</script>';
+}
+if (isset($_GET['inserir']) && !$_GET['inserir']) {
+    echo '
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    Swal.fire({
+        icon: "error",
+        title: "Ops...",
+        text: "Erro ao cadastrar cliente",
+    }).then(function() {
+        window.location.href = "/cliente";
+    });
+});
+</script>';
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <title>Exibir Clientes</title>
+
     <!-- Icon -->
     <link rel="icon" href="./../public/assets/book-solid.png" type="image/x-icon">
 
@@ -61,8 +91,10 @@ $clientes = $clienteDao->getAll();
                 <td><?= $cliente['cpf']; ?></td>
                 <td><?= $cliente['telefone']; ?></td>
                 <td>
-                    <a href="/cliente/"><i class="fa-solid fa-magnifying-glass"></i></a>
-                    <a href="/cliente/alterar/<?= $cliente['id']; ?>" data-bs-toggle="modal" data-bs-target="#modalEditar"><i class="fa-solid fa-pencil"
+                    <a href="/cliente/consultar/<?= $cliente['id']; ?>"><i class="fa-solid fa-magnifying-glass"></i></a>
+<!--                    <a href="/cliente/alterar/--><?php //= $cliente['id']; ?><!--" data-bs-toggle="modal" data-bs-target="#modalEditar"><i class="fa-solid fa-pencil"-->
+<!--                                                                             style="color: #cff4fc;"></i></a>-->
+                    <a href="/categoria/alterar/<?= $cliente['id']; ?>"><i class="fa-solid fa-pencil me-5"
                                                                              style="color: #cff4fc;"></i></a>
                     <form action="/cliente/excluir/<?= $cliente['id']; ?>" method="post" class="col"
                           id="<?= $cliente['id']; ?>"

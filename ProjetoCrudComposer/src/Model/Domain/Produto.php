@@ -5,25 +5,26 @@ namespace Php\Primeiroprojeto\Model\Domain;
 class Produto
 {
     protected string $nome;
-    protected string $quantidade;
+    protected int $quantidade;
     protected float $valor;
     protected int $categoria_id;
+    protected int $fornecedor_id;
 
-
-    public function __construct($nome, $quantidade, $valor, $categoria_id)
+    public function __construct($nome, $quantidade, $valor, $categoria_id, $fornecedor_id)
     {
         $this->setNome($nome);
         $this->setQuantidade($quantidade);
         $this->setValor($valor);
         $this->setCategoriaId($categoria_id);
+        $this->setFornecedorId($fornecedor_id);
     }
 
     /**
-     * @return int
+     * @return mixed
      */
-    public function getCategoriaId(): int
+    public function getNome()
     {
-        return $this->categoria_id;
+        return $this->nome;
     }
 
     /**
@@ -43,11 +44,27 @@ class Produto
     }
 
     /**
-     * @param int $categoria_id
+     * @return int
      */
-    public function setCategoriaId(int $categoria_id)
+    public function getCategoriaId(): int
     {
-        $this->categoria_id = $categoria_id;
+        return $this->categoria_id;
+    }
+
+    /**
+     * @return int
+     */
+    public function getFornecedorId(): int
+    {
+        return $this->fornecedor_id;
+    }
+
+    /**
+     * @param mixed $nome
+     */
+    public function setNome($nome)
+    {
+        $this->nome = $nome;
     }
 
     /**
@@ -67,19 +84,18 @@ class Produto
     }
 
     /**
-     * @return mixed
+     * @param int $categoria_id
      */
-    public function getNome()
+    public function setCategoriaId(int $categoria_id)
     {
-        return $this->nome;
+        $this->categoria_id = $categoria_id;
     }
 
-
     /**
-     * @param mixed $nome
+     * @param int $fornecedor_id
      */
-    public function setNome($nome)
+    public function setFornecedorId(int $fornecedor_id): void
     {
-        $this->nome = $nome;
+        $this->fornecedor_id = $fornecedor_id;
     }
 }

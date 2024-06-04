@@ -37,6 +37,7 @@ $categoria = $categoriaDao->getId($idInt);
             </div>
         </form>
     </div>
+    <a href="/categoria" class="btn bg-info-subtle mt-5" style="margin-left: 8%;">Voltar</a>
 </main>
 <footer></footer>
 </body>

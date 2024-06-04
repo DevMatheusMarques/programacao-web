@@ -24,6 +24,10 @@ class CategoriaController
         exit();
     }
 
+    public function consultar($id) {
+        require_once '../src/View/Categoria/consultar-categoria.php';
+    }
+
     public function exibir()
     {
         $categoriaDAO = new CategoriaDAO();

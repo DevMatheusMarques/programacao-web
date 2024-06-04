@@ -20,11 +20,16 @@ class ClienteController
         );
 
         $clienteDAO = new ClienteDAO();
-        if ($clienteDAO->inserir($cliente)){
-            return '<script> alert("Cliente cadastrado com sucesso")</script>';
+        if ($clienteDAO->inserir($cliente)) {
+            header("Location: /cliente?inserir=true");
         } else {
-            return '<script> alert("Erro ao cadastrar cliente!")</script>';
+            header("Location: /cliente?inserir=false");
         }
+        exit();
+    }
+
+    public function consultar($id) {
+        require_once '../src/View/Cliente/consultar-cliente.php';
     }
 
     public function exibir() {

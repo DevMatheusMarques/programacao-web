@@ -15,43 +15,45 @@ class FornecedorDAO
 
     public function inserir(Fornecedor $fornecedor): bool
     {
-        $sql = 'insert into fornecedor (nome, cnpj, endereco, telefone, produto_id, categoria_id) values (:nome, :cnpj, :endereco, :telefone, :produto_id, :categoria_id)';
+        $sql = 'insert into fornecedor (nome, cnpj, endereco, telefone) values (:nome, :cnpj, :endereco, :telefone)';
         $p = $this->conexao->getConexao()->prepare($sql);
         $p->bindValue(':nome', $fornecedor->getNome());
         $p->bindValue(':cnpj', $fornecedor->getCnpj());
         $p->bindValue(':endereco', $fornecedor->getEndereco());
         $p->bindValue(':telefone', $fornecedor->getTelefone());
-        $p->bindValue(':produto_id', $fornecedor->getProdutoId());
-        $p->bindValue(':categoria_id', $fornecedor->getCategoriaId());
         return $p->execute();
     }
 
-    public function alterar(Fornecedor $fornecedor)
+    public function alterar(Fornecedor $fornecedor, int $id)
     {
-        try{
-            $sql = 'UPDATE fornecedor SET nome = :nome, cnpj = :cnpj, telefone = :telefone, produto_id = :produto_id, categoria_id = :categoria_id';
+        try {
+            $sql = 'UPDATE fornecedor SET nome = :nome, cnpj = :cnpj, endereco = :endereco, telefone = :telefone WHERE id = :id';
             $p = $this->conexao->getConexao()->prepare($sql);
+            $p->bindValue(':id', $id);
             $p->bindValue(':nome', $fornecedor->getNome());
             $p->bindValue(':cnpj', $fornecedor->getCnpj());
             $p->bindValue(':endereco', $fornecedor->getEndereco());
             $p->bindValue(':telefone', $fornecedor->getTelefone());
-            $p->bindValue(':produto_id', $fornecedor->getProdutoId());
-            $p->bindValue(':categoria_id', $fornecedor->getCategoriaId());
             return $p->execute();
         } catch (\Exception $exception) {
-            return "Erro ao alterar no banco de dados";
+            return "Erro ao alterar no banco de dados: " . $exception->getMessage();
         }
     }
 
-    public function excluir(Fornecedor $fornecedor)
+    public function excluir($id)
     {
         try{
             $sql = 'delete from fornecedor where id = :id;';
             $p = $this->conexao->getConexao()->prepare($sql);
-            $p->bindValue(':id', $fornecedor);
+            $p->bindValue(':id', $id);
             return $p->execute();
-        } catch (\Exception $exception) {
-            return "Erro ao excluir no banco de dados";
+        } catch (\Exception $e) {
+            if ($e->getCode() === '23000') {
+                $message = 'violation';
+            } else {
+                $message = $e->getMessage();
+            }
+            return $message;
         }
     }
 

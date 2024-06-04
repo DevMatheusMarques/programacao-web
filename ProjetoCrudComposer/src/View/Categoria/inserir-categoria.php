@@ -15,7 +15,7 @@
 <main>
     <div class="card mt-5 mb-5 border border-info-subtle" style="margin-left: 8%; margin-right: 8%;">
         <div class="card-header border border-info-subtle bg-info-subtle">
-            Inserir Categoria
+            Cadastrar Categoria
         </div>
         <form action="/categoria/inserir/novo" class="card-body shadow p-3" method="post">
             <div class="mb-3">

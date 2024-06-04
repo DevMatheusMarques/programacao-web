@@ -8,17 +8,13 @@ class Fornecedor
     protected string $cnpj;
     protected string $endereco;
     protected string $telefone;
-    protected int $produto_id;
-    protected int $categoria_id;
 
-    public function __construct($nome, $cnpj, $endereco, $telefone, $produto_id, $categoria_id)
+    public function __construct($nome, $cnpj, $endereco, $telefone)
     {
         $this->setNome($nome);
         $this->setCnpj($cnpj);
         $this->setEndereco($endereco);
         $this->setTelefone($telefone);
-        $this->setProdutoId($produto_id);
-        $this->setCategoriaId($categoria_id);
     }
 
     /**
@@ -83,37 +79,5 @@ class Fornecedor
     public function setTelefone(string $telefone): void
     {
         $this->telefone = $telefone;
-    }
-
-    /**
-     * @return int
-     */
-    public function getProdutoId(): int
-    {
-        return $this->produto_id;
-    }
-
-    /**
-     * @param int $produto_id
-     */
-    public function setProdutoId(int $produto_id): void
-    {
-        $this->produto_id = $produto_id;
-    }
-
-    /**
-     * @return int
-     */
-    public function getCategoriaId(): int
-    {
-        return $this->categoria_id;
-    }
-
-    /**
-     * @param int $categoria_id
-     */
-    public function setCategoriaId(int $categoria_id): void
-    {
-        $this->categoria_id = $categoria_id;
     }
 }

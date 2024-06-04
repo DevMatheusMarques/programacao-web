@@ -41,6 +41,7 @@ $cliente = $clienteDao->getId($idInt);
             </div>
         </form>
     </div>
+    <a href="/cliente" class="btn bg-info-subtle mt-5" style="margin-left: 8%;">Voltar</a>
 </main>
 <footer></footer>
 </body>

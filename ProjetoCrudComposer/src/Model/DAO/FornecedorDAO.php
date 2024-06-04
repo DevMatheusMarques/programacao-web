@@ -2,6 +2,7 @@
 
 namespace Php\Primeiroprojeto\Model\DAO;
 
+use PDO;
 use Php\Primeiroprojeto\Model\Domain\Fornecedor;
 
 class FornecedorDAO
@@ -77,5 +78,12 @@ class FornecedorDAO
         } catch (\Exception $exception) {
             return "Erro ao pegar dados no banco.";
         }
+    }
+
+    public function search($query) {
+        $sql = 'SELECT * FROM fornecedor WHERE nome LIKE :query';
+        $stmt = $this->conexao->getConexao()->prepare($sql);
+        $stmt->execute(['query' => '%' . $query . '%']);
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 }

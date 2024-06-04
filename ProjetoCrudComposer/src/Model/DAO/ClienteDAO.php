@@ -2,6 +2,7 @@
 
 namespace Php\Primeiroprojeto\Model\DAO;
 
+use PDO;
 use Php\Primeiroprojeto\Model\Domain\Cliente;
 
 class ClienteDAO
@@ -70,5 +71,12 @@ class ClienteDAO
         } catch (\Exception $exception) {
             return "Erro ao pegar dados no banco." . $exception->getMessage();
         }
+    }
+
+    public function search($query) {
+        $sql = 'SELECT * FROM cliente WHERE nome LIKE :query';
+        $stmt = $this->conexao->getConexao()->prepare($sql);
+        $stmt->execute(['query' => '%' . $query . '%']);
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 }

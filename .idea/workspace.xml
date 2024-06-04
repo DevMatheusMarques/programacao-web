@@ -5,20 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f5d0d2a-51dc-444a-a75d-ea9bcc123128" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/97e579cf-3dc2-48d6-b7df-f618fe2e5633.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/97e579cf-3dc2-48d6-b7df-f618fe2e5633.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/97e579cf-3dc2-48d6-b7df-f618fe2e5633/storage_v2/_src_/schema/programacaoweb.gKalMA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/97e579cf-3dc2-48d6-b7df-f618fe2e5633/storage_v2/_src_/schema/programacaoweb.gKalMA.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoCrudComposer/src/Controller/CategoriaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetoCrudComposer/src/Controller/CategoriaController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjetoCrudComposer/bootstrap.php" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetoCrudComposer/bootstrap.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjetoCrudComposer/src/Model/DAO/CategoriaDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetoCrudComposer/src/Model/DAO/CategoriaDAO.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoCrudComposer/src/View/Categoria/consultar-categoria.php" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetoCrudComposer/src/View/Categoria/consultar-categoria.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoCrudComposer/src/View/Categoria/exibir-categoria.php" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetoCrudComposer/src/View/Categoria/exibir-categoria.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoCrudComposer/src/View/Cliente/consultar-cliente.php" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetoCrudComposer/src/View/Cliente/consultar-cliente.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoCrudComposer/src/View/Cliente/exibir-cliente.php" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetoCrudComposer/src/View/Cliente/exibir-cliente.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoCrudComposer/src/View/Fornecedor/consultar-fornecedor.php" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetoCrudComposer/src/View/Fornecedor/consultar-fornecedor.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoCrudComposer/src/View/Fornecedor/exibir-fornecedor.php" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetoCrudComposer/src/View/Fornecedor/exibir-fornecedor.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoCrudComposer/src/View/Produto/consultar-produto.php" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetoCrudComposer/src/View/Produto/consultar-produto.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoCrudComposer/src/View/Produto/exibir-produto.php" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetoCrudComposer/src/View/Produto/exibir-produto.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjetoCrudComposer/src/Model/DAO/ClienteDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetoCrudComposer/src/Model/DAO/ClienteDAO.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjetoCrudComposer/src/Model/DAO/FornecedorDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetoCrudComposer/src/Model/DAO/FornecedorDAO.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjetoCrudComposer/src/Model/DAO/ProdutoDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetoCrudComposer/src/Model/DAO/ProdutoDAO.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjetoCrudComposer/src/View/Navegacao/Navbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetoCrudComposer/src/View/Navegacao/Navbar.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +94,7 @@
       <workItem from="1716038280518" duration="3898000" />
       <workItem from="1716053475965" duration="760000" />
       <workItem from="1716149153140" duration="606000" />
-      <workItem from="1717469814290" duration="4430000" />
+      <workItem from="1717469814290" duration="9399000" />
     </task>
     <servers />
   </component>

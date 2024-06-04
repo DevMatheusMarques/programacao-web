@@ -2,6 +2,7 @@
 
 namespace Php\Primeiroprojeto\Model\DAO;
 
+use PDO;
 use Php\Primeiroprojeto\Model\Domain\Produto;
 
 class ProdutoDAO
@@ -74,4 +75,10 @@ class ProdutoDAO
         }
     }
 
+    public function search($query) {
+        $sql = 'SELECT * FROM produto WHERE nome LIKE :query';
+        $stmt = $this->conexao->getConexao()->prepare($sql);
+        $stmt->execute(['query' => '%' . $query . '%']);
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
 }

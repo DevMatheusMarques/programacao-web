@@ -4,6 +4,7 @@ use Php\Primeiroprojeto\Controller\CategoriaController;
 use Php\Primeiroprojeto\Controller\ClienteController;
 use Php\Primeiroprojeto\Controller\FornecedorController;
 use Php\Primeiroprojeto\Controller\ProdutoController;
+use Php\Primeiroprojeto\Controller\SearchController;
 
 require __DIR__.'/vendor/autoload.php';
 
@@ -21,6 +22,8 @@ $produtoController = new ProdutoController();
 $fornecedorController = new FornecedorController();
 
 $clienteController = new ClienteController();
+
+$searchController = new SearchController();
 
 //Categoria
 
@@ -85,6 +88,11 @@ $router->get('/cliente/alterar/{id}', [$clienteController, 'alterar']);
 $router->post('/cliente/alterar/novo', [$clienteController, 'alterarNovo']);
 
 $router->post('/cliente/excluir/{id}', [$clienteController, 'excluir']);
+
+#SearchController
+$router->get('/search', [$searchController, 'search']);
+
+
 
 #Rotas
 
